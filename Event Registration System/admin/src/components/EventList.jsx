@@ -10,20 +10,9 @@ function EventList({ events }) {
   const navigate = useNavigate();
 
   const handleRegistration = async (eventId) => {
-    // if (!user) navigate("/login");
-    // else {
-      // api
-      //   .post("/registration")
-      //   .then((res) => {
-      //     console.log(res.data);
-      //   })
-      //   .catch((err) => console.error("Error fetching Events:", err));
       try {
         const response=await api.post("/registrations", { eventId });
         setRes(response.message);
-        // setSuccess(
-        //   "Registration successful! Check your email for confirmation."
-        // );
         setTimeout(() => navigate("/registrations"), 1000);
       } catch (err) {
         console.error(err.response?.data?.message || "Failed to register");
