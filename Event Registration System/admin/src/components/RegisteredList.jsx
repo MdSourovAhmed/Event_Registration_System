@@ -34,57 +34,8 @@ function RegisteredList({ registrationData }) {
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {registrationData.map((reg) => (
             <EventCard event={reg.event}/>
-            //       <div className="bg-white shadow-md rounded-lg p-6 m-4 hover:shadow-lg transition">
-            //         <h3 className="text-xl font-semibold">{reg.event.title}</h3>
-            //         <p className="text-gray-600">
-            //           {new Date(reg.event.date).toLocaleDateString()}
-            //         </p>
-            //         <p className="text-gray-600">{reg.event.location}</p>
-            //         <p className="text-gray-500">{reg.event.description}</p>
-            //         {/* <Link to={`/events/${event._id}`} className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-            //   View Details
-            // </Link> */}
-            //       </div>
-            // <EventCard key={reg.event._id} event={reg.event} />
           ))}
         </div>
-        // <div className="space-y-4">
-        //   {registrationData.map((reg) => (
-        //     <div key={reg._id} className="bg-white shadow-md rounded-lg p-6">
-        //       <h3 className="text-xl font-semibold">{reg.event.title}</h3>
-        //       <p className="text-gray-600">
-        //         Date: {new Date(reg.event.date).toLocaleDateString()}
-        //       </p>
-        //       <p className="text-gray-600">Status: {reg.status}</p>
-        //       <p className="text-gray-600">
-        //         Cancellation Deadline:{" "}
-        //         {new Date(reg.cancellationDeadline).toLocaleDateString()}
-        //       </p>
-        //       {reg.qrCode && (
-        //         <img
-        //           src={reg.qrCode}
-        //           alt="QR Code"
-        //           className="w-32 h-32 mt-2"
-        //         />
-        //       )}
-        //       {reg.status === "registered" &&
-        //       new Date() <= new Date(reg.cancellationDeadline) ? (
-        //         <button
-        //           onClick={() => handleCancel(reg._id)}
-        //           className="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-        //         >
-        //           Cancel Registration
-        //         </button>
-        //       ) : (
-        //         <p className="text-red-500 mt-2">
-        //           {reg.status === "cancelled"
-        //             ? "Cancelled"
-        //             : "Cancellation period has expired"}
-        //         </p>
-        //       )}
-        //     </div>
-        //   ))}
-        // </div>
       )}
     </div>
   );
