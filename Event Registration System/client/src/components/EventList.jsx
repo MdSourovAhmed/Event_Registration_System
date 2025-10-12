@@ -10,14 +10,6 @@ function EventList({ events }) {
   const navigate = useNavigate();
 
   const handleRegistration = async (eventId) => {
-    // if (!user) navigate("/login");
-    // else {
-      // api
-      //   .post("/registration")
-      //   .then((res) => {
-      //     console.log(res.data);
-      //   })
-      //   .catch((err) => console.error("Error fetching Events:", err));
       try {
         const response=await api.post("/registrations", { eventId });
         setRes(response.message);
@@ -41,26 +33,6 @@ function EventList({ events }) {
             <EventCard event={event} key={event._id} />
           ))}
         </div>
-          // events.map((event) => (
-          // <div
-          //   key={event._id}
-          //   className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition"
-          // >
-          //   <h3 className="text-xl font-semibold">{event.title}</h3>
-          //   <p className="text-gray-600">
-          //     {new Date(event.date).toLocaleDateString()}
-          //   </p>
-          //   <p className="text-gray-600">{event.location}</p>
-          //   <p className="text-gray-500">{event.description}</p>
-          //   <button
-          //     onClick={() => handleRegistration(event._id)}
-          //     className="bg-teal-500 text-white p-2 mt-2  rounded-lg hover:bg-teal-600"
-          //   >
-          //     Register Now
-          //   </button>
-          //   <div className="mt-2 text-red-400" >{res}</div>
-          // </div>
-        // ))
       )}
     </div>
   );
@@ -68,12 +40,3 @@ function EventList({ events }) {
 
 export default EventList;
 
-// function EventList(){
-// return (
-//   <>
-//   <h1>Event Lists</h1>
-//   </>
-// )
-// };
-
-// export default EventList;
