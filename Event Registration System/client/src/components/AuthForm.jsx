@@ -65,17 +65,6 @@ import { useState } from 'react';
                required
              />
            </div>
-           {/* <div>
-             <label className="block text-gray-600 dark:text-gray-300">Secondary Email</label>
-             <input
-               type="email"
-               name="secondaryemail"
-               value={formData.secondaryemail}
-               onChange={handleChange}
-               className="w-full p-2 border dark:border-gray-600 rounded-lg dark:bg-gray-700"
-               required
-             />
-           </div> */}
            <button
              type="submit"
              className="w-full bg-teal-500 text-white p-2 rounded-lg hover:bg-teal-600"
