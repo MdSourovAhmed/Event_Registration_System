@@ -92,9 +92,6 @@ function AuthForm({ onSubmit, isLogin }) {
             />
           </div>
           <div>
-            {/* <label className="block text-gray-600 dark:text-gray-300">
-              Secondary Email (Optional)
-            </label> */}
             <input
               type="text"
               name="role"
