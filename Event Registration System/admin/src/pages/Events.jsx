@@ -4,16 +4,6 @@ import { AuthContext } from "../context/AuthContext";
 import EventList from "../components/EventList";
 
 function Events() {
-  // const [events, setEvents] = useState([]);
-  // const { user, loading } = useContext(AuthContext);
-
-  // useEffect(() => {
-  //   api
-  //     .get("/events")
-  //     .then((res) => setEvents(res.data))
-  //     .catch((err) => console.error("Error fetching Events:", err));
-  // }, []);
-
   const [events, setEvents] = useState([]);
   const [error, setError] = useState(null);
 
