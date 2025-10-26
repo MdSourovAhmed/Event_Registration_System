@@ -1,12 +1,7 @@
 const express = require("express");
 const cors = require("cors");
-// const helmet = require("helmet");
-// const rateLimit = require("express-rate-limit");
-// const mongoSanitize = require("mongo-sanitize");
-// const hpp = require("hpp");
-// const connectDB = require("./src/config/db");
 const dotenv = require("dotenv");
-// const { body } = require("express-validator");
+
 dotenv.config();
 
 const app = express();
