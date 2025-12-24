@@ -17,7 +17,6 @@ function EventList({ events }) {
       } catch (err) {
         console.error(err.response?.data?.message || "Failed to register");
       }
-    // }
   };
 
   return (
