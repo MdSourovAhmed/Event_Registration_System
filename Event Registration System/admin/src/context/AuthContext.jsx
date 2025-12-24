@@ -15,7 +15,6 @@ export function AuthProvider({ children }) {
         .then((res) => setUser(res.data.user))
         .catch(() => localStorage.removeItem("token"))
         .finally(() => setLoading(false));
-
       // console.log(user);
     } else {
       setLoading(false);
@@ -29,7 +28,6 @@ export function AuthProvider({ children }) {
   };
 
   const register = async (name, email, password, secondaryEmail, role) => {
-    // console.log(name);
     const res = await api.post("/auth/admin/signup", {
       name,
       email,
